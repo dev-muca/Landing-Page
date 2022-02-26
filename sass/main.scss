@@ -64,6 +64,7 @@ body {
   }
 
   @media (max-width: 768px) {
+    /* VISULIZAÇÃO MOBILE */
     display: block;
     text-align: center;
 
@@ -73,7 +74,7 @@ body {
       height: 200px;
       margin: 30px auto 10px auto;
     }
-  }
+  } /* FIM DO VIEW MOBILE */
 }
 
 .description {
@@ -91,6 +92,7 @@ body {
   }
 
   @media (max-width: 768px) {
+    /* VISULIZAÇÃO MOBILE */
     text-align: justify;
     font-weight: 400;
 
@@ -101,28 +103,54 @@ body {
     p {
       margin: 20px 30px 20px 30px;
     }
-  }
+  } /* FIM DO VIEW MOBILE */
 }
 
 .skills {
-  display: flex;
-  margin: 10px;
+  @media (min-width: 769px) and (max-width: 2560px) {
+    display: flex;
+    margin: 10px;
+  }
+
+  @media (max-width: 768px) {
+    /* VISULIZAÇÃO MOBILE */
+    display: block;
+    margin: 25px auto;
+  } /* FIM DO VIEW MOBILE */
 }
 
 .soft-skill,
 .hard-skill {
-  width: 100%;
-  margin: 10px 0px 10px 30px;
+  @media (min-width: 769px) and (max-width: 2560px) {
+    width: 100%;
+    margin: 10px 0px 10px 30px;
 
-  h4 {
-    margin: 5px auto;
-    font-weight: bold;
-    text-transform: uppercase;
+    h4 {
+      margin: 5px auto;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 5px auto;
+    }
   }
 
-  p {
-    margin: 7px auto;
-  }
+  @media (max-width: 768px) {
+    /* VISULIZAÇÃO MOBILE */
+    width: 100%;
+    margin: 10px 0px 10px 30px;
+
+    h4 {
+      margin: 5px auto;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 5px auto;
+    }
+  } /* FIM DO VIEW MOBILE */
 }
 
 #tag {
