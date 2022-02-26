@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+@import "./color";
+
+* {
+  /* CSS RESET */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+} /* END CSS RESET */
+
+body {
+  background-color: $brancoSecundario;
+  height: 200vh;
+}
+
+@mixin display($type, $position) {
+  /* FUNÇÃO PARA ALINHAMENTO DE FLEX-BOX */
+  display: $type;
+  justify-content: $position;
+  align-items: $position;
+} /* FIM DA FUNÇÃO */
+
+.blueBar {
+  @include display(flex, center);
+  background-color: $azulAbsoluto;
+  width: auto;
+  height: 50px;
+
+  h2 {
+    color: $brancoAbsoluto;
+    text-transform: uppercase;
+    user-select: none;
+  }
+}
+
+.perfil {
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px black;
+  background-color: #ffffff;
+  margin: 50px auto;
+  width: 70%;
+
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+}
+
+.title {
+  border-radius: 4px 4px 0 0;
+}
+
+.personal {
+  @media (min-width: 769px) and (max-width: 2560px) {
+    @include display(flex, center);
+
+    img {
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      margin: 30px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+    text-align: center;
+
+    img {
+      border-radius: 100%;
+      width: 200px;
+      height: 200px;
+      margin: 30px auto 10px auto;
+    }
+  }
+}
+
+.description {
+  @media (min-width: 769px) and (max-width: 2560px) {
+    text-align: justify;
+    font-weight: 400;
+
+    h4 {
+      margin: 15px auto;
+    }
+
+    p {
+      margin: 15px 30px 15px 0px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    text-align: justify;
+    font-weight: 400;
+
+    h4 {
+      margin: 15px auto 25px 30px;
+    }
+
+    p {
+      margin: 20px 30px 20px 30px;
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  margin: 10px;
+}
+
+.soft-skill,
+.hard-skill {
+  width: 100%;
+  margin: 10px 0px 10px 30px;
+
+  h4 {
+    margin: 5px auto;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  p {
+    margin: 7px auto;
+  }
+}
+
+#tag {
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #548cff;
+  border-radius: 5px;
+  padding: 2px 5px;
+
+  &:hover {
+    background-color: #1664ff;
+  }
+}
+
+.line {
+  border-bottom: 1px solid #c9c9c9;
+  width: 94%;
+  margin: 0px auto;
+}
+
+.social-media {
+  @media (min-width: 769px) and (max-width: 2560px) {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5%;
+    margin: 0px 200px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.card-media {
+  text-align: center;
+  background-color: $brancoAbsoluto;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px $pretoAbsoluto;
+  height: 320px;
+  width: 100px;
+  transition: 0.5s;
+  position: relative;
+  flex-grow: 1;
+
+  &:hover {
+    background-color: $azulPrimario;
+    border: 1px solid $azulSecundario;
+    color: $brancoAbsoluto;
+    cursor: pointer;
+  }
+
+  i {
+    font-size: 48px;
+    margin: 30px auto 5px auto;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px auto;
+  }
+
+  p {
+    text-align: justify;
+    margin: 30px 20px;
+  }
+
+  a {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translate(-50%);
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: $azulPrimario;
+    color: $brancoAbsoluto;
+    border-radius: 50px;
+    padding: 10px 40px;
+  }
+}
