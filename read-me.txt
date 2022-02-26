@@ -17,4 +17,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] HTML5
 - [x] CSS
 - [x] SASS 
-- [x] JavaScript
+- [ ] JavaScript
