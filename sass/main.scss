@@ -42,7 +42,7 @@ body {
   margin: 50px auto;
   width: 70%;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1366px) {
     width: 90%;
   }
 }
@@ -125,6 +125,8 @@ body {
     width: 100%;
     margin: 10px 0px 10px 30px;
 
+    display: block;
+
     h4 {
       margin: 5px auto;
       font-weight: bold;
@@ -132,7 +134,7 @@ body {
     }
 
     p {
-      margin: 5px auto;
+      margin: 8px auto;
     }
   }
 
@@ -172,11 +174,20 @@ body {
 }
 
 .social-media {
-  @media (min-width: 769px) and (max-width: 2560px) {
+  @media (min-width: 1367px) and (max-width: 2560px) {
     display: flex;
-    flex-flow: row nowrap;
-    gap: 5%;
-    margin: 0px 200px;
+    align-items: center;
+    margin: 0px auto;
+    min-width: 70%;
+    width: 70%;
+    gap: 50px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1366px) {
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    margin: 0px 5%;
   }
 
   @media (max-width: 768px) {
@@ -185,50 +196,108 @@ body {
 }
 
 .card-media {
-  text-align: center;
-  background-color: $brancoAbsoluto;
-  border: 1px solid #000000;
-  border-radius: 5px;
-  box-shadow: 1px 1px 2px $pretoAbsoluto;
-  height: 320px;
-  width: 100px;
-  transition: 0.5s;
-  position: relative;
-  flex-grow: 1;
-
-  &:hover {
-    background-color: $azulPrimario;
-    border: 1px solid $azulSecundario;
-    color: $brancoAbsoluto;
-    cursor: pointer;
-  }
-
-  i {
-    font-size: 48px;
-    margin: 30px auto 5px auto;
-  }
-
-  h2 {
-    text-transform: uppercase;
+  @media (min-width: 1367px) and (max-width: 2560px) {
     text-align: center;
-    margin: 15px auto;
+    background-color: $brancoAbsoluto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px $pretoAbsoluto;
+    transition: 0.5s;
+    position: relative;
+    flex-grow: 1;
+    width: 250px;
+    height: 350px;
+
+    &:hover {
+      background-color: $azulPrimario;
+      border: 1px solid $azulSecundario;
+      color: $brancoAbsoluto;
+      cursor: pointer;
+    }
+
+    i {
+      font-size: 48px;
+      margin: 30px auto 5px auto;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      text-align: center;
+      margin: 15px auto;
+    }
+
+    p {
+      text-align: justify;
+      padding: 0px 30px;
+    }
+
+    a {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translate(-50%);
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $azulPrimario;
+      color: $brancoAbsoluto;
+      border-radius: 50px;
+      padding: 10px 40px;
+    }
   }
 
-  p {
-    text-align: justify;
-    margin: 30px 20px;
-  }
+  @media (min-width: 769px) and (max-width: 1366px) {
+    background-color: $brancoAbsoluto;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px $pretoAbsoluto;
+    transition: 0.5s;
 
-  a {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translate(-50%);
-    text-decoration: none;
-    text-transform: uppercase;
-    background-color: $azulPrimario;
-    color: $brancoAbsoluto;
-    border-radius: 50px;
-    padding: 10px 40px;
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    height: 220px;
+    width: 180px;
+
+    &:hover {
+      background-color: $azulPrimario;
+      border: 1px solid $azulSecundario;
+      color: $brancoAbsoluto;
+      cursor: pointer;
+    }
+
+    i {
+      position: absolute;
+      top: 15%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 48px;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    p {
+      display: none;
+    }
+
+    a {
+      @include display(flex, center);
+      text-decoration: none;
+      text-transform: uppercase;
+      background-color: $azulPrimario;
+      color: $brancoAbsoluto;
+      border-radius: 50px;
+      width: 120px;
+      height: 35px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      bottom: 15px;
+    }
   }
 }
