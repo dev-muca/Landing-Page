@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
 @import "./color";
+@import "./navbar";
 
 /* DATA: 27/02/2022 --- HORÁRIO: 19:30 */
 
@@ -14,6 +15,15 @@
 body {
   background-color: $brancoSecundario;
   height: 200vh;
+  transition: 0.8s;
+}
+
+body.dark {
+  background-color: $pretoSecundario;
+}
+
+.darkColor {
+  background-color: $roxoPrimario;
 }
 
 @mixin display($type, $position) {

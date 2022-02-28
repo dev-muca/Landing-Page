@@ -1,5 +1,73 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
+/* CORES DO MODO LIGHT */
+/* CORES DO MODO DARK */
+.navbar {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  background-color: #1664ff;
+  width: auto;
+  height: 50px;
+}
+.navbar h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.checkbox {
+  opacity: 0;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+  background-color: #000000;
+}
+
+.label {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 26px;
+  background-color: #398ab9;
+  display: flex;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.fa-moon {
+  color: #f1c40f;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.fa-sun {
+  color: #f39c12;
+  position: absolute;
+  top: 5px;
+  left: 28px;
+}
+
+.ball {
+  background-color: #ffffff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  transition: transform 0.2s linear;
+}
+
 /* DATA: 27/02/2022 --- HORÁRIO: 19:30 */
 * {
   /* CSS RESET */
@@ -13,6 +81,15 @@
 body {
   background-color: #eeeeee;
   height: 200vh;
+  transition: 0.8s;
+}
+
+body.dark {
+  background-color: #181818;
+}
+
+.darkColor {
+  background-color: #3e065f;
 }
 
 /* FIM DA FUNÇÃO */
