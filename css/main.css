@@ -1,12 +1,46 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
-/* CORES DO MODO LIGHT */
-/* CORES DO MODO DARK */
+* {
+  /* CSS RESET */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* END CSS RESET */
+html {
+  /* PALETA DE CORES */
+  --bg: #eeeeee;
+  --bg-card: #1c658c;
+  --bg-headerdiv: #1664ff;
+  --bg-div: #ffffff;
+  --bordas: #000000;
+  --bg-tag: #548cff;
+  --bg-visit: #1c658c;
+  --bg-cardhover: #1c658c;
+  --color-tag: #398ab9;
+  --text-ptag: #ffffff;
+  --text-p: #000000;
+  --text-h2: #ffffff;
+  --text-h4: #000000;
+  --text-card: #ffffff;
+  --text-visit: #ffffff;
+  --line-color: #c9c9c9;
+  --ball-color: #ffffff;
+  /* $brancoPrimario: #d8d2cb; */
+}
+
+body {
+  background-color: var(--bg);
+  height: 500vh;
+}
+
 .navbar {
   display: flex;
   position: relative;
   justify-content: space-around;
-  background-color: #1664ff;
+  background-color: var(--bg-headerdiv);
   width: auto;
   height: 50px;
 }
@@ -15,7 +49,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #ffffff;
+  color: var(--text-h2);
   text-transform: uppercase;
   user-select: none;
 }
@@ -25,7 +59,7 @@
 }
 .checkbox:checked + .label .ball {
   transform: translateX(24px);
-  background-color: #000000;
+  background-color: var(--ball-color);
 }
 
 .label {
@@ -35,12 +69,13 @@
   transform: translateY(-50%);
   width: 50px;
   height: 26px;
-  background-color: #398ab9;
+  background-color: var(--bg-tag);
   display: flex;
   border-radius: 50px;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  color: #592279;
 }
 
 .fa-moon {
@@ -58,7 +93,7 @@
 }
 
 .ball {
-  background-color: #ffffff;
+  background-color: var(--ball-color);
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -68,51 +103,27 @@
   transition: transform 0.2s linear;
 }
 
-/* DATA: 27/02/2022 --- HORÁRIO: 19:30 */
-* {
-  /* CSS RESET */
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
-}
-
-/* END CSS RESET */
-body {
-  background-color: #eeeeee;
-  height: 500vh;
-  transition: 0.8s;
-}
-
-body.dark {
-  background-color: #181818;
-}
-
-.darkColor {
-  background-color: #3e065f;
-}
-
 /* FIM DA FUNÇÃO */
 .blueBar {
   /* FUNÇÃO PARA ALINHAMENTO DE FLEX-BOX */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #1664ff;
+  background-color: var(--bg-headerdiv);
   width: auto;
   height: 50px;
 }
 .blueBar h2 {
-  color: #ffffff;
+  color: var(--text-h2);
   text-transform: uppercase;
   user-select: none;
 }
 
 .perfil {
-  border: 1px solid black;
+  border: 1px solid var(--bordas);
   border-radius: 5px;
-  box-shadow: 1px 1px 2px black;
-  background-color: #ffffff;
+  box-shadow: 1px 1px 2px var(--bordas);
+  background-color: var(--bg-div);
   margin: 50px auto;
   width: 70%;
 }
@@ -166,9 +177,11 @@ body.dark {
     font-weight: 400;
   }
   .description h4 {
+    color: var(--text-h4);
     margin: 15px auto;
   }
   .description p {
+    color: var(--text-p);
     margin: 15px 30px 15px 0px;
   }
 }
@@ -179,9 +192,11 @@ body.dark {
     font-weight: 400;
   }
   .description h4 {
+    color: var(--text-h4);
     margin: 15px auto 25px 30px;
   }
   .description p {
+    color: var(--text-p);
     margin: 20px 30px 20px 30px;
   }
 }
@@ -219,9 +234,11 @@ body.dark {
     margin: 5px auto;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--text-h4);
   }
   .soft-skill p,
 .hard-skill p {
+    color: var(--text-ptag);
     margin: 8px auto;
   }
 }
@@ -237,26 +254,28 @@ body.dark {
     margin: 5px auto;
     font-weight: bold;
     text-transform: uppercase;
+    color: var(--text-h4);
   }
   .soft-skill p,
 .hard-skill p {
+    color: var(--text-ptag);
     margin: 5px auto;
   }
 }
 
 #tag {
   text-decoration: none;
-  color: #ffffff;
-  background-color: #548cff;
+  color: var(--text-color);
+  background-color: var(--bg-tag);
   border-radius: 5px;
   padding: 2px 5px;
 }
 #tag:hover {
-  background-color: #1664ff;
+  background-color: var(--bg-headerdiv);
 }
 
 .line {
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid var(--line-color);
   width: 94%;
   margin: 0px auto;
 }
@@ -288,10 +307,10 @@ body.dark {
 @media (min-width: 1367px) and (max-width: 2560px) {
   .card-media {
     text-align: center;
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: var(--bg-div);
+    border: 1px solid var(--bordas);
+    box-shadow: 1px 1px 2px var(--bordas);
     border-radius: 5px;
-    box-shadow: 1px 1px 2px #000000;
     transition: 0.5s;
     position: relative;
     flex-grow: 1;
@@ -299,9 +318,9 @@ body.dark {
     height: 350px;
   }
   .card-media:hover {
-    background-color: #1c658c;
-    border: 1px solid #398ab9;
-    color: #ffffff;
+    background-color: var(--bg-cardhover);
+    border: 1px solid var(--bg-card);
+    color: var(--text-ptag);
     cursor: pointer;
   }
   .card-media i {
@@ -324,16 +343,16 @@ body.dark {
     transform: translate(-50%);
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #1c658c;
-    color: #ffffff;
+    background-color: var(--bg-visit);
+    color: var(--text-visit);
     border-radius: 50px;
     padding: 10px 40px;
   }
 }
 @media (min-width: 769px) and (max-width: 1366px) {
   .card-media {
-    background-color: #ffffff;
-    border: 1px solid #000000;
+    background-color: var(--bg-div);
+    border: 1px solid var(--bordas);
     border-radius: 5px;
     box-shadow: 1px 1px 2px #000000;
     transition: 0.5s;
@@ -344,9 +363,9 @@ body.dark {
     width: 180px;
   }
   .card-media:hover {
-    background-color: #1c658c;
-    border: 1px solid #398ab9;
-    color: #ffffff;
+    background-color: var(--bg-cardhover);
+    border: 1px solid var(--bg-card);
+    color: var(--text-ptag);
     cursor: pointer;
   }
   .card-media i {
@@ -373,8 +392,8 @@ body.dark {
     align-items: center;
     text-decoration: none;
     text-transform: uppercase;
-    background-color: #1c658c;
-    color: #ffffff;
+    background-color: var(--bg-visit);
+    color: var(--text-visit);
     border-radius: 50px;
     width: 120px;
     height: 35px;
