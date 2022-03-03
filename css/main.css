@@ -300,7 +300,11 @@ body {
 }
 @media (max-width: 768px) {
   .social-media {
-    display: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    width: fit-content;
+    gap: 30px;
+    margin: 0px auto;
   }
 }
 
@@ -355,9 +359,8 @@ body {
     background-color: var(--bg-div);
     border: 1px solid var(--bordas);
     border-radius: 5px;
-    box-shadow: 1px 1px 2px #000000;
+    box-shadow: 1px 1px 2px var(--bordas);
     transition: 0.5s;
-    display: flex;
     flex-grow: 1;
     position: relative;
     height: 220px;
@@ -399,6 +402,59 @@ body {
     border-radius: 50px;
     width: 120px;
     height: 35px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .card-media {
+    background-color: var(--bg-div);
+    border: 1px solid var(--bordas);
+    color: var(--text-visit);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px var(--bordas);
+    transition: 0.5s;
+    position: relative;
+    height: 200px;
+    width: 175px;
+  }
+  .card-media:hover {
+    background-color: var(--bg-cardhover);
+    border: 1px solid var(--bg-card);
+    color: var(--text-ptag);
+    cursor: pointer;
+  }
+  .card-media i {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 58px;
+  }
+  .card-media h2 {
+    text-transform: uppercase;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .card-media p {
+    display: none;
+  }
+  .card-media a {
+    /* FUNÇÃO PARA ALINHAMENTO DE FLEX-BOX */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: var(--bg-visit);
+    color: var(--text-ptag);
+    border-radius: 50px;
+    width: 120px;
+    height: 40px;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
