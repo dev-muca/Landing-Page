@@ -26,7 +26,7 @@ html {
   --text-h2: #ffffff;
   --text-h4: #000000;
   --text-card: #ffffff;
-  --text-visit: #ffffff;
+  --text-visit: #000000;
 
   --line-color: #c9c9c9;
   --ball-color: #ffffff;
@@ -308,6 +308,7 @@ body {
     flex-grow: 1;
     width: 250px;
     height: 350px;
+    color: var(--text-visit);
 
     &:hover {
       background-color: var(--bg-cardhover);
@@ -340,7 +341,7 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       background-color: var(--bg-visit);
-      color: var(--text-visit);
+      color: var(--text-ptag);
       border-radius: 50px;
       padding: 10px 40px;
     }
@@ -357,6 +358,7 @@ body {
     position: relative;
     height: 220px;
     width: 180px;
+    color: var(--text-visit);
 
     &:hover {
       background-color: var(--bg-cardhover);
@@ -390,7 +392,7 @@ body {
       text-decoration: none;
       text-transform: uppercase;
       background-color: var(--bg-visit);
-      color: var(--text-visit);
+      color: var(--text-ptag);
       border-radius: 50px;
       width: 120px;
       height: 35px;

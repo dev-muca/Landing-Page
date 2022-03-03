@@ -25,23 +25,23 @@ const initialColors = {
 };
 
 const darkMode = {
-  bg: "#000000",
-  bgCard: "#616F39",
-  bgHeaderdiv: "#3E432E",
-  bgDiv: "#616F39",
-  bordas: "#000000",
-  bgTag: "#8ba638",
-  colorTag: "",
-  colorPtag: "",
+  bg: "#0b090a",
+  bgCard: "#ba181b",
+  bgHeaderdiv: "#660708",
+  bgDiv: "#ba181b",
+  bordas: "#e5383b",
+  bgTag: "#e5383b",
+  colorTag: "#ffffff",
+  colorPtag: "#ffffff",
   textP: "#ffffff",
-  textH2: "",
+  textH2: "#ffffff",
   textH4: "#ffffff",
-  textCard: "#A7D129",
-  lineColor: "#8ba638",
-  ballColor: "",
-  bgVisit: "#A7D129",
-  textVisit: "#ffffff",
-  bgCardhover: "#A7D129",
+  textCard: "##ffffff",
+  lineColor: "#ffffff",
+  ballColor: "#ffffff",
+  bgVisit: "#e5383b",
+  textVisit: "#d3d3d3",
+  bgCardhover: "#e5383b",
 };
 
 const transformKey = (key) =>
