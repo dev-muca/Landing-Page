@@ -17,4 +17,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [x] HTML5
 - [x] CSS
 - [x] SASS 
-- [ ] JavaScript
+- [x] JavaScript
+
+### PREVIEW DO PROJETO
+
+<img src="https://i.imgur.com/WGVxveW.png" alt="Project Preview Image">
