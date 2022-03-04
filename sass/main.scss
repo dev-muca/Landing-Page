@@ -19,6 +19,7 @@ html {
   --bg-tag: #548cff;
   --bg-visit: #1c658c;
   --bg-cardhover: #1c658c;
+  --bg-taghover: #1664ff;
 
   --color-tag: #398ab9;
   --text-ptag: #ffffff;
@@ -262,7 +263,8 @@ body {
   padding: 2px 5px;
 
   &:hover {
-    background-color: var(--bg-headerdiv);
+    background-color: var(--bg-taghover);
+    color: var(--bg-div);
   }
 }
 
